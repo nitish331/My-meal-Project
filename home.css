@@ -189,6 +189,7 @@ header .favourites .icon:hover {
   border: none;
   transition: all 0.2s ease-in-out;
   font-family: "Dancing Script", cursive;
+  cursor: pointer;
 }
 .meals .content .meal-card .button-container button:hover {
   box-shadow: var(--box-shadow-small);
@@ -197,6 +198,7 @@ header .favourites .icon:hover {
   font-size: 1.5rem;
   color: var(--white);
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 .meals .content .meal-card .button-container ion-icon:hover {
   transform: scale(1.2);
@@ -209,3 +211,91 @@ header .favourites .icon:hover {
   visibility: hidden;
 }
 /* meal-section-ends */
+/* get meals details start */
+.get-details {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+.get-details .modal {
+  background-color: black;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.get-details .dish-name {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.get-details .container {
+  width: 70vw;
+  height: 80vh;
+  z-index: 5;
+  position: absolute;
+  background-color: white;
+  padding: 2%;
+  box-shadow: 0 0 7px 2px rgba(31, 134, 198, 0.878);
+}
+.get-details .container .meals-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.get-details .container .image {
+  width: 120px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./assets/background-1.jpg");
+  max-width: 120px;
+  min-height: 120px;
+  box-shadow: 0 0 7px 2px rgba(89, 83, 83, 0.725);
+  transition: all 0.3s ease-in-out;
+}
+.get-details .container .image:hover {
+  transform: scale(1.2);
+}
+.get-details .container .reciepe {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  letter-spacing: 0.5px;
+  height: 32%;
+  overflow-y: scroll;
+  padding: 2%;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+.get-details .container .btn-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.get-details .btn-container button {
+  font-size: 1.2rem;
+  padding: 1%;
+  background-color: rgb(210, 54, 54);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.655);
+  transition: all 0.3s ease-in-out;
+}
+.get-details .btn-container button:hover {
+  background-color: orangered;
+  box-shadow: 0 0 6px 4px rgb(55, 34, 34);
+}
