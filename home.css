@@ -75,14 +75,16 @@ header .favourites .icon:hover {
 }
 /* Header-section ends */
 /* meal-section Starts */
-.meals {
+.meals,
+.fav-meals {
   max-width: 85vw;
   height: auto;
   margin: auto;
   margin-top: 10px;
 }
 /* heading-part */
-.meals .heading h1 {
+.meals .heading h1,
+.fav-meals .heading h1 {
   text-align: center;
   color: var(--white);
   font-size: 2.5rem;
@@ -121,7 +123,7 @@ header .favourites .icon:hover {
   border-top-right-radius: 20px;
   box-shadow: var(--box-shadow-small);
   color: gray;
-  transition: all 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
 }
 .meals .search input::placeholder {
   color: lightgray;
@@ -130,7 +132,8 @@ header .favourites .icon:hover {
   box-shadow: var(--box-shadow-bg);
 }
 /* meals-container */
-.meals .content {
+.meals .content,
+.fav-meals .content {
   width: 100%;
   display: flex;
   flex: 0 1 40%;
@@ -140,7 +143,8 @@ header .favourites .icon:hover {
   align-items: center;
   height: auto;
 }
-.meals .content .meal-card {
+.meals .content .meal-card,
+.fav-meals .content .meal-card {
   width: 250px;
   padding: 20px;
   background-color: transparent;
@@ -149,58 +153,68 @@ header .favourites .icon:hover {
   row-gap: 10px;
   justify-content: space-evenly;
   align-items: center;
-  transition: all 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
 }
-.meals .content .meal-card:hover {
+.meals .content .meal-card:hover,
+.fav-meals .content .meal-card:hover {
   box-shadow: var(--box-shadow-small);
 }
-.meals .content .meal-card h3 {
+.meals .content .meal-card h3,
+.fav-meals .content .meal-card h3 {
   color: var(--white);
   font-size: 1.5rem;
   letter-spacing: 1px;
   text-shadow: var(--text-shadow);
 }
-.meals .content .meal-card .image {
+.meals .content .meal-card .image,
+.fav-meals .content .meal-card .image {
   width: 110px;
   max-width: 110px;
   min-height: 110px;
   border-radius: 50%;
-  transition: all 0.38s ease-in-out;
+  transition: transform 0.38s ease-in-out;
 }
-.meals .content .meal-card .image:hover {
+.meals .content .meal-card .image:hover,
+.fav-meals .content .meal-card .image:hover {
   transform: scale(1.25);
 }
-.meals .content .meal-card .image img {
+.meals .content .meal-card .image img,
+.fav-meals .content .meal-card .image img {
   width: 110px;
   height: 110px;
   border-radius: 50%;
   box-shadow: var(--box-shadow-small);
 }
-.meals .content .meal-card .button-container {
+.meals .content .meal-card .button-container,
+.fav-meals .content .meal-card .button-container {
   width: 90%;
   display: flex;
   justify-content: space-between;
 }
-.meals .content .meal-card .button-container button {
+.meals .content .meal-card .button-container button,
+.fav-meals .content .meal-card .button-container button {
   font-size: 1.3rem;
   color: var(--white);
   background-color: gray;
   padding: 5px;
   border: none;
-  transition: all 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
   font-family: "Dancing Script", cursive;
   cursor: pointer;
 }
-.meals .content .meal-card .button-container button:hover {
+.meals .content .meal-card .button-container button:hover,
+.fav-meals .content .meal-card .button-container button:hover {
   box-shadow: var(--box-shadow-small);
 }
-.meals .content .meal-card .button-container ion-icon {
+.meals .content .meal-card .button-container ion-icon,
+.fav-meals .content .meal-card .button-container ion-icon {
   font-size: 1.5rem;
   color: var(--white);
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
-.meals .content .meal-card .button-container ion-icon:hover {
+.meals .content .meal-card .button-container ion-icon:hover,
+.fav-meals .content .meal-card .button-container ion-icon:hover {
   transform: scale(1.2);
 }
 .result {
@@ -298,4 +312,8 @@ header .favourites .icon:hover {
 .get-details .btn-container button:hover {
   background-color: orangered;
   box-shadow: 0 0 6px 4px rgb(55, 34, 34);
+}
+/* favourite-section starts */
+.fav-meals {
+  display: none;
 }
